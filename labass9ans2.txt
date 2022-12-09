@@ -1,0 +1,97 @@
+mysql> create table company(c_id int primary key Auto_increment,c_name varchar(30),c_city varchar(30));
+Query OK, 0 rows affected (3.16 sec)
+
+
+
+mysql> insert into company values(1,"Dominos","los Angeles");
+Query OK, 1 row affected (0.10 sec)
+
+mysql>  insert into company values(2,"Pizza Hunt","san Francisco");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into company values(3,"papa johns","san Diego");
+Query OK, 1 row affected (0.07 sec)
+
+mysql>  insert into company values(4,"Ah Pizz","Fremont");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into company values(5,"Nino Pizza","Las Vegas");
+Query OK, 1 row affected (0.04 sec)
+
+mysql>  insert into company values(6,"Pizzeria","Boston");
+Query OK, 1 row affected (0.04 sec)
+
+mysql>  insert into company values(7,"chunk e cheese","Chicago");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from company;
++------+----------------+---------------+
+| c_id | c_name         | c_city        |
++------+----------------+---------------+
+|    1 | Dominos        | los Angeles   |
+|    2 | Pizza Hunt     | san Francisco |
+|    3 | papa johns     | san Diego     |
+|    4 | Ah Pizz        | Fremont       |
+|    5 | Nino Pizza     | Las Vegas     |
+|    6 | Pizzeria       | Boston        |
+|    7 | chuck e cheese | Chicago       |
++------+----------------+---------------+
+7 rows in set (0.00 sec)
+
+
+mysql> create table foods(i_id int primary key, i_name varchar(30), unitsold int, c_id int,foreign key(c_id) references company(c_id));
+Query OK, 0 rows affected (1.40 sec)
+
+
+
+mysql> insert into foods values(1,"Large pizza",5,2);
+Query OK, 1 row affected (0.09 sec)
+
+mysql>  insert into foods values(2,"Garlic Knots",6,3);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into foods values(3,"Large Pizza",3,3);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into foods values(4,"Medium pizza",8,4);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into foods values(5,"Breadsticks",7,1);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into foods values(6,"Medium pizza",11,1);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into foods values(7,"Small pizza",9,6);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into foods values(8,"Small pizza",6,7);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from foods;
++------+--------------+----------+------+
+| i_id | i_name       | unitsold | c_id |
++------+--------------+----------+------+
+|    1 | Large pizza  |        5 |    2 |
+|    2 | Garlic Knots |        6 |    3 |
+|    3 | Large Pizza  |        3 |    3 |
+|    4 | Medium pizza |        8 |    4 |
+|    5 | Breadsticks  |        7 |    1 |
+|    6 | Medium pizza |       11 |    1 |
+|    7 | Small pizza  |        9 |    6 |
+|    8 | Small pizza  |        6 |    7 |
++------+--------------+----------+------+
+
+mysql> select * from company as C inner join foods as F on C.c_id = F.c_id;
++------+----------------+---------------+------+--------------+----------+------+
+| c_id | c_name         | c_city        | i_id | i_name       | unitsold | c_id |
++------+----------------+---------------+------+--------------+----------+------+
+|    1 | Dominos        | los Angeles   |    5 | Breadsticks  |        7 |    1 |
+|    1 | Dominos        | los Angeles   |    6 | Medium pizza |       11 |    1 |
+|    2 | Pizza Hunt     | san Francisco |    1 | Large pizza  |        5 |    2 |
+|    3 | papa johns     | san Diego     |    2 | Garlic Knots |        6 |    3 |
+|    3 | papa johns     | san Diego     |    3 | Large Pizza  |        3 |    3 |
+|    4 | Ah Pizz        | Fremont       |    4 | Medium pizza |        8 |    4 |
+|    6 | Pizzeria       | Boston        |    7 | Small pizza  |        9 |    6 |
+|    7 | chuck e cheese | Chicago       |    8 | Small pizza  |        6 |    7 |
++------+----------------+---------------+------+--------------+----------+------+

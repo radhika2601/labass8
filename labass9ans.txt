@@ -1,0 +1,181 @@
+Enter password: ***********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.31 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use anudip;
+Database changed
+mysql> create table parents(p_id int,p_name varchar(40),city varchar(50),age int,income int,occuption varchar(60),email varchar(60));
+Query OK, 0 rows affected (24.93 sec)
+
+mysql> insert into parents values(1,"om","ahmedbad","40",5000000,"engineer","om@gmail.com");
+Query OK, 1 row affected (0.35 sec)
+
+mysql> insert into parents values(2,"shree","delhi","45",6000000,"teacher","shree@gmail.com");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into parents values(3,"sony","mumbai","30",6009000,"teacher","sony@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(4,"riya","chennai","36",7008000,"service","riya@gmail.com");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into parents values(5,"priya","banglore","33",8008000,"architer","priya@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into parents values(6,"ganesh","pune","31",900000,"engineer","ganesh@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into parents values(7,"jay","chennai","39",7002000,"service","jay@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(8,"john","chennai","31",700000,"techaer","john@gmail.com");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into parents values(9,"mitali","mumbai","33",600000,"teacher","mitali@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into parents values(10,"soham","banglore","39",8000000,"architer","soham@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(11,"shreejit","delhi","45",9000000,"teacher","shreejit@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into parents values(12,"omii","ahmedbad","40",9000000,"engineer","omii@gmail.com");
+Query OK, 1 row affected (0.22 sec)
+
+mysql> insert into parents values(13,"jeveen","chennai","31",700000,"techaer","jeveen@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(14,"moti","banglore","33",8009000,"architer","moti@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(15,"shreya","chennai","36",7008000,"service","shreya@gmail.com");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into parents values(16,"ajay","chennai","39",700000,"service","ajay@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(17,"rutuja","chennai","36",700670,"service","rutuja@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(18,"mahesh","mumbai","30",600000,"teacher","maesh@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(19,"maduri","mumbai","30",1000000,"teacher","maduri@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(20,"nikita","mumbai","30",1000045,"teacher","nikita@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(20,"nikita","mumbai","30",1000045,"teacher","nikita@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from parents;
++------+----------+----------+------+---------+-----------+--------------------+
+| p_id | p_name   | city     | age  | income  | occuption | email              |
++------+----------+----------+------+---------+-----------+--------------------+
+|    1 | om       | ahmedbad |   40 | 5000000 | engineer  | om@gmail.com       |
+|    2 | shree    | delhi    |   45 | 6000000 | teacher   | shree@gmail.com    |
+|    3 | sony     | mumbai   |   30 | 6009000 | teacher   | sony@gmail.com     |
+|    4 | riya     | chennai  |   36 | 7008000 | service   | riya@gmail.com     |
+|    5 | priya    | banglore |   33 | 8008000 | architer  | priya@gmail.com    |
+|    6 | ganesh   | pune     |   31 |  900000 | engineer  | ganesh@gmail.com   |
+|    7 | jay      | chennai  |   39 | 7002000 | service   | jay@gmail.com      |
+|    8 | john     | chennai  |   31 |  700000 | techaer   | john@gmail.com     |
+|    9 | mitali   | mumbai   |   33 |  600000 | teacher   | mitali@gmail.com   |
+|   10 | soham    | banglore |   39 | 8000000 | architer  | soham@gmail.com    |
+|   11 | shreejit | delhi    |   45 | 9000000 | teacher   | shreejit@gmail.com |
+|   12 | omii     | ahmedbad |   40 | 9000000 | engineer  | omii@gmail.com     |
+|   13 | jeveen   | chennai  |   31 |  700000 | techaer   | jeveen@gmail.com   |
+|   14 | moti     | banglore |   33 | 8009000 | architer  | moti@gmail.com     |
+|   15 | shreya   | chennai  |   36 | 7008000 | service   | shreya@gmail.com   |
+|   16 | ajay     | chennai  |   39 |  700000 | service   | ajay@gmail.com     |
+|   17 | rutuja   | chennai  |   36 |  700670 | service   | rutuja@gmail.com   |
+|   18 | mahesh   | mumbai   |   30 |  600000 | teacher   | maesh@gmail.com    |
+|   19 | maduri   | mumbai   |   30 | 1000000 | teacher   | maduri@gmail.com   |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | nikita@gmail.com   |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | nikita@gmail.com   |
++------+----------+----------+------+---------+-----------+--------------------+
+
+
+mysql> update parents set email="NA" where p_id=1;
+Query OK, 0 rows affected (0.04 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from parents;
++------+----------+----------+------+---------+-----------+-------+
+| p_id | p_name   | city     | age  | income  | occuption | email |
++------+----------+----------+------+---------+-----------+-------+
+|    1 | om       | ahmedbad |   40 | 5000000 | engineer  | NA    |
+|    2 | shree    | delhi    |   45 | 6000000 | teacher   | NA    |
+|    3 | sony     | mumbai   |   30 | 6009000 | teacher   | NA    |
+|    4 | riya     | chennai  |   36 | 7008000 | service   | NA    |
+|    5 | priya    | banglore |   33 | 8008000 | architer  | NA    |
+|    6 | ganesh   | pune     |   31 |  900000 | engineer  | NA    |
+|    7 | jay      | chennai  |   39 | 7002000 | service   | NA    |
+|    8 | john     | chennai  |   31 |  700000 | techaer   | NA    |
+|    9 | mitali   | mumbai   |   33 |  600000 | teacher   | NA    |
+|   10 | soham    | banglore |   39 | 8000000 | architer  | NA    |
+|   11 | shreejit | delhi    |   45 | 9000000 | teacher   | NA    |
+|   12 | omii     | ahmedbad |   40 | 9000000 | engineer  | NA    |
+|   13 | jeveen   | chennai  |   31 |  700000 | techaer   | NA    |
+|   14 | moti     | banglore |   33 | 8009000 | architer  | NA    |
+|   15 | shreya   | chennai  |   36 | 7008000 | service   | NA    |
+|   16 | ajay     | chennai  |   39 |  700000 | service   | NA    |
+|   17 | rutuja   | chennai  |   36 |  700670 | service   | NA    |
+|   18 | mahesh   | mumbai   |   30 |  600000 | teacher   | NA    |
+|   19 | maduri   | mumbai   |   30 | 1000000 | teacher   | NA    |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | NA    |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | NA    |
++------+----------+----------+------+---------+-----------+-------+
+
+
+mysql> select * from parents where city in("ahmedbad","delhi","mumbai","chennai","banglore");
++------+----------+----------+------+---------+-----------+-------+
+| p_id | p_name   | city     | age  | income  | occuption | email |
++------+----------+----------+------+---------+-----------+-------+
+|    1 | om       | ahmedbad |   40 | 5000000 | engineer  | NA    |
+|    2 | shree    | delhi    |   45 | 6000000 | teacher   | NA    |
+|    3 | sony     | mumbai   |   30 | 6009000 | teacher   | NA    |
+|    4 | riya     | chennai  |   36 | 7008000 | service   | NA    |
+|    5 | priya    | banglore |   33 | 8008000 | architer  | NA    |
+|    7 | jay      | chennai  |   39 | 7002000 | service   | NA    |
+|    8 | john     | chennai  |   31 |  700000 | techaer   | NA    |
+|    9 | mitali   | mumbai   |   33 |  600000 | teacher   | NA    |
+|   10 | soham    | banglore |   39 | 8000000 | architer  | NA    |
+|   11 | shreejit | delhi    |   45 | 9000000 | teacher   | NA    |
+|   12 | omii     | ahmedbad |   40 | 9000000 | engineer  | NA    |
+|   13 | jeveen   | chennai  |   31 |  700000 | techaer   | NA    |
+|   14 | moti     | banglore |   33 | 8009000 | architer  | NA    |
+|   15 | shreya   | chennai  |   36 | 7008000 | service   | NA    |
+|   16 | ajay     | chennai  |   39 |  700000 | service   | NA    |
+|   17 | rutuja   | chennai  |   36 |  700670 | service   | NA    |
+|   18 | mahesh   | mumbai   |   30 |  600000 | teacher   | NA    |
+|   19 | maduri   | mumbai   |   30 | 1000000 | teacher   | NA    |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | NA    |
+|   20 | nikita   | mumbai   |   30 | 1000045 | teacher   | NA    |
++------+----------+----------+------+---------+-----------+-------+
+
+mysql> select count(p_id) from parents where income>600000;
++-------------+
+| count(p_id) |
++-------------+
+|          19 |
++-------------+
+
+mysql> select * from parents where income<700000 and age>20;
++------+--------+--------+------+--------+-----------+-------+
+| p_id | p_name | city   | age  | income | occuption | email |
++------+--------+--------+------+--------+-----------+-------+
+|    9 | mitali | mumbai |   33 | 600000 | teacher   | NA    |
+|   18 | mahesh | mumbai |   30 | 600000 | teacher   | NA    |
++------+--------+--------+------+--------+-----------+-------+
